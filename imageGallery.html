@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <button id="previousbtn">Previous</button>
+    <img id="photo" src="https://www.shutterstock.com/image-photo/arabic-cuisine-middle-eastern-traditional-600nw-1690553083.jpg" alt="img" />
+    <button id="nextbtn">Next</button>
+    <script>
+      let imageData = [
+        "https://www.shutterstock.com/image-photo/arabic-cuisine-middle-eastern-traditional-600nw-1690553083.jpg",
+        "https://www.shutterstock.com/image-photo/mexican-food-many-dishes-cuisine-260nw-2067116069.jpg",
+        "https://cdn.britannica.com/94/240094-050-D5CC461B/Indian-naan-flatbread.jpg",
+      ];
+
+      let previousBtn = document.getElementById("previousbtn");
+      let nextBtn = document.getElementById("nextbtn");
+      let photo = document.getElementById("photo");
+      let count = 0;
+
+      previousBtn.addEventListener("click", () => {
+        count = count - 1;
+        if (count < 0) {
+          count = imageData.length - 1;
+        }
+        photo.src = imageData[count];
+      });
+
+      nextBtn.addEventListener("click", () => {
+        count = count + 1;
+        if (count >= imageData.length) {
+          count = 0;
+        }
+        photo.src = imageData[count];
+      });
+    </script>
+  </body>
+</html>

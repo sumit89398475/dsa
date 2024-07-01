@@ -1,0 +1,26 @@
+<!-- Write a JavaScript function to capitalize the first letter of each word in a string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to capitalize the first letter of each word in
+      a string.
+    </title>
+  </head>
+  <body>
+    <script>
+      function capitalizeFirst(str) {
+        var strArray = str.trim().split(/\s+/);
+        for (let i = 0; i < strArray.length; i++) {
+            strArray[i] = strArray[i][0].toUpperCase() + strArray[i].slice(1).toLowerCase();
+        }
+        return strArray.join(" ")
+      }
+
+      console.log(capitalizeFirst("my name is sumit pandey gavsgs shdau"));
+    </script>
+  </body>
+</html>

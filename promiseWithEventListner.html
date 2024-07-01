@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resolve Promise After Button Click</title>
+    <style>
+      #btn{
+        border: 2px solid red;
+        border-radius: 4px;
+        padding: 2px;
+        margin: 3px;
+        width: 40px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+  <button id="btn">Click</button> 
+  <script>
+    function promiseResolvedAfterClick(){
+      return new Promise((resolve, reject)=>{
+   let btn =  document.getElementById("btn");
+   btn.addEventListener("click", ()=>{
+    resolve("Promise Resolve")
+   })
+      })
+    }
+    promiseResolvedAfterClick().then((result)=>console.log(result))
+  </script> 
+</body>
+</html>

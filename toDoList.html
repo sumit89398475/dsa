@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <style>
+        #task{
+            border: 2px solid red;
+            border-radius: 3px;
+            padding: 2px;
+        }
+        #btn{
+            border: 2px solid green;
+            border-radius: 2px;
+            width: 60px;
+            height: 20px;
+            margin-top: 15px;
+           
+        }
+        .completed{
+            text-decoration: line-through;
+        }
+        .pointer{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo App</h1>
+    <input type="text" name="task" id="task" placeholder="To do">
+    <button id="btn" onclick="addToDo()">Task</button>
+    <ul id="taskList">
+
+    </ul>
+    <script>
+        function addToDo()
+       { let inputTask = document.getElementById("task");
+        let newItemText = inputTask.value.trim();
+
+        if(newItemText!==0){
+            const list = document.getElementById("taskList");
+            const addListItem = document.createElement("li");
+            console.log(typeof(addListItem))
+            console.log(addListItem)
+            addListItem.textContent= newItemText;
+          addListItem.classList.add("pointer")
+           addListItem.addEventListener('click', function(){
+            this.classList.toggle("completed")
+           })
+            list.appendChild(addListItem);
+            inputTask.value="";
+        }}
+    </script>
+</body>
+</html>

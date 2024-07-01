@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apply function</title>
+</head>
+<body>
+    <script>
+        const candidateDetails = {
+            candidate1: "Sumit Pandey",
+            candidate1Age: "25",
+            candidate2: "Amit Pandey",
+            candidate2Age: "32"
+        }
+
+    const details = function(profession, location){
+        console.log(this.candidate1 + " and " +this.candidate2 + " both are " + profession + "and living in "+ location)
+    }
+
+    // call function 
+    details.call(candidateDetails, "Engineer", "Machwa Gopalganj")
+
+    // apply function 
+
+    details.apply(candidateDetails,["Engineer", "Machwa Gopalganj"])
+
+    // bind function 
+
+  const bindStudentDetails =  details.bind(candidateDetails, "Engineer", "Machwa Gopalganj")
+
+  bindStudentDetails()
+
+    </script>
+</body>
+</html>

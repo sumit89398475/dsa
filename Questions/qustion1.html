@@ -1,0 +1,43 @@
+<!-- Create a grades object that stores a set of student grades in an object. Provide a function for adding a grade and a function for displaying the student’s grade average. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question-1</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      let grade = {
+        marks: [],
+      };
+
+      let input = document.createElement("input");
+      input.placeholder = "Enter Marks Here";
+      input.type = "number";
+
+      let button = document.createElement("button")
+      button.innerText="Add Marks"
+      let displayMarks = document.createElement("div")
+   
+      
+      function addMarks(){
+        
+   grade.marks.push(input.value)
+        console.log(grade.marks)
+        displayMarks.textContent= grade.marks
+        let container = document.getElementsByClassName("container")[0]
+        container.appendChild(displayMarks)
+      }
+
+      
+      button.addEventListener("click", addMarks)
+      let container = document.getElementsByClassName("container")[0];
+      container.appendChild(input);
+      container.appendChild(button)
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Write a JavaScript function to count the number of vowels in a given string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function vowelsCheck(data) {
+        var vocwelCount = 0
+        let arrayData = data.split("")
+        for(let i =0; i<arrayData.length; i++){
+            if(arrayData[i]==="a" || arrayData[i]==="e" || arrayData[i]==="i" || arrayData[i] ==="o" || arrayData[i]==="u"){
+                console.log("Vowels")
+                vocwelCount++
+            }else{
+                console.log("consonents")
+            }
+        }
+
+        console.log(vocwelCount)
+      }
+
+      vowelsCheck("Sumit")
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Write a JavaScript function to check if an object is empty. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write a JavaScript function to check if an object is empty.</title>
+  </head>
+  <body>
+    <script>
+        function checkObject(obj){
+            const objectLength  = Object.keys(obj) 
+          if(objectLength.length ===0){
+            console.log("object is empty")
+            return 
+          }else{
+            console.log(objectLength.length) 
+          }
+        }
+
+ checkObject({
+            // name:"sumit",
+            // caste: "Brahmin",
+            // age:26
+        })
+
+    </script>
+  </body>
+</html>

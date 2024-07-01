@@ -1,0 +1,32 @@
+<!-- Write a JavaScript function to shuffle the elements of an array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to shuffle the elements of an array.
+    </title>
+  </head>
+  <body>
+    <script>
+      function shuffleArray(array) {
+        var shuffleArraycopy = array.slice(); // Create a copy of the array
+        for (let i = shuffleArraycopy.length - 1; i > 0; i--) {
+          // Correct loop condition
+          let randomPlace = Math.floor(Math.random() * (i + 1)); // Generate random index
+          console.log(randomPlace); // Print random index for debugging
+          // Swap elements
+          [shuffleArraycopy[i], shuffleArraycopy[randomPlace]] = [
+            shuffleArraycopy[randomPlace],
+            shuffleArraycopy[i],
+          ];
+        }
+        return shuffleArraycopy; // Return the shuffled array
+      }
+
+      console.log(shuffleArray([4, 5, 6])); // Test the shuffleArray function
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>call function</title>
+  </head>
+  <body>
+    <script>
+     
+          const studentDetails = {
+          name: "Sumit Pandey",
+          gender: "Male",
+          age: "25",
+        };
+      
+
+        let collegeStudentDetail = function details(homeTown , state){
+console.log("my name is " + this.name +" and my state name is " + homeTown + " " + state)
+        }
+        collegeStudentDetail.call(studentDetails, "Gopalganj", "Bihar" )
+
+    </script>
+  </body>
+</html>

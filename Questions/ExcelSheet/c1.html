@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to check if a given string contains only
+      digits.
+    </title>
+  </head>
+  <body>
+    <script>
+      function isNumeric(str) {
+        let strArray = str.split("");
+        for (let i = 0; i < strArray.length; i++) {
+          if (strArray[i] >= 0 || strArray[i] <= 9) {
+            console.log("str is Numeric");
+            break;
+          } else {
+            console.log("str is not numeric");
+            break;
+          }
+        }
+      }
+
+      isNumeric("2323");
+    </script>
+  </body>
+</html>

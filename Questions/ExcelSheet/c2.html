@@ -1,0 +1,27 @@
+<!-- Write a JavaScript function to check if a number is prime. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write a JavaScript function to check if a number is primet</title>
+  </head>
+  <body>
+    <script>
+      function isPrimeNumber(num) {
+        for (let i = 2; i < Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            console.log("num is not a Prime Number");
+            break;
+          } else {
+            console.log("num is  Prime Number");
+            break;
+          }
+        }
+      }
+
+      isPrimeNumber(11);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorGame1</title>
+    <style>
+    
+    </style>
+</head>
+<body >
+    <h1>Dynamic BackGround Color</h1>
+    <button id="blue">Blue BackGround</button>
+    <button id="yellow">Yellow BackGround</button>
+    <button id="green">Green BackGround</button>
+   
+<script>
+ 
+document.getElementById('blue').addEventListener('click', function(){
+    document.body.style.backgroundColor = 'blue';
+})
+
+document.getElementById('yellow').addEventListener('click', function(){
+    document.body.style.backgroundColor = "yellow";
+    document.querySelectorAll("h1")[0].style.color="red"
+})
+
+
+</script>
+</body>
+</html>

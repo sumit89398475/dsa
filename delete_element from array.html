@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delete Element From Array</title>
+  </head>
+  <body>
+    <h1 id="array"></h1>
+    <input type="text" id="position" />
+    <button onclick="delete_array()" id="delete">Delete Element</button>
+  
+    <h2>After removing existing array</h2>
+    <h3 id="result"></h3>
+
+    <script>
+      let array = [4, 5, 6, 3, 2, 7, 8];
+      let a = document.getElementById("array");
+      a.innerHTML = array;
+      const delete_array = () => {
+        let position = document.getElementById("position").value;
+        position= parseInt(position);
+        for (let i = position; i < array.length - 1; i++) {
+          array[i] = array[i + 1];
+        }
+        array.length = array.length - 1;
+        console.log(array);
+        let result = document.getElementById("result");
+        result.innerHTML=array
+      };
+    </script>
+  </body>
+</html>

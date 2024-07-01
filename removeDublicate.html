@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Dublicate from the Array </title>
+</head>
+<body>
+
+    <h1>
+        Remove Dublicate Here
+    </h1>
+    <label for="enterInput">Enter the string for Checking</label>
+    <input 
+    id="enterInput"
+    type="text"
+    >
+    <button id="btn" onclick="removeDublicate()"> Check </button>
+    <h1 id="result"></h1>
+    <script>
+  function removeDublicate(){
+    let inputValue = document.getElementById("enterInput").value;   
+    let inputArray = inputValue.split("");
+    for(let i=0; i<inputArray.length; i++){
+        for(let j=i+1; j<inputArray.length; j++)
+        if(inputArray[i]===inputArray[j]){
+            inputArray.splice(j,1);
+            j--
+        }
+       
+    }
+    console.log(inputArray)
+    let result = document.getElementById("result");
+    result.innerText = inputArray.join("")
+    console.log(result)
+  }
+    </script>
+</body>
+</html>

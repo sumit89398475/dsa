@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Data using Promise</title>
+  </head>
+  <body>
+    <script>
+      function fetchData() {
+        return new Promise((resolve, reject) => {
+          fetch(
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65420&lng=77.23730&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+          )
+            .then((response) => {
+              if (!response.ok) {
+                throw Error("Data not fetched");
+              }
+              return response.json();
+            })
+            .then((data) => resolve(data))
+            .catch((error) => reject(error));
+        });
+      }
+
+      fetchData()
+        .then((data) => console.log(data))
+        .catch((error) => console.log("error occur"));
+    </script>
+  </body>
+</html>

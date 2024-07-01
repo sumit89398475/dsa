@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrom Check</title>
+  </head>
+  <body>
+    <script>
+      let numString = prompt("write the number or word for checking Palindrom");
+
+      function palinDrom(numString) {
+        let arrayNumString = numString.split("");
+        console.log(arrayNumString);
+        let reverseArrayNumString = arrayNumString.slice().reverse();
+        console.log(reverseArrayNumString);
+        for (let i = 0; i < arrayNumString.length; i++) {
+          if (arrayNumString[i] === reverseArrayNumString[i]) {
+            continue;
+          } else {
+            console.log("Not a Palindrome Number");
+            return;
+          }
+        }
+        console.log("palindrome")
+      }
+      palinDrom(numString);
+    </script>
+  </body>
+</html>

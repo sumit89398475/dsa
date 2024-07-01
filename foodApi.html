@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food App</title>
+</head>
+<body>
+    <img src="https://edamam-product-images.s3.amazonaws.com/web-img/e6d/e6d92cd128dca2fba8381f93877d7637.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEBIaCXVzLWVhc3QtMSJHMEUCIQDkC%2BjdPnS1Dlvaz6MVF6w0%2BZCkm21bCAYnV3YIc1PLJwIgLIlrIyXQ%2FeZemrlIhFVXDvqvYH8MzMWq88Qdzn%2BeaVAquQUIexAAGgwxODcwMTcxNTA5ODYiDHpZxfbA7iH%2B04CyNyqWBT77bvWPvsuRsV1WqqbnaHMzxrVKox4oQvBYuXNdO8DAlMm11nFKjOxw%2BRmbFe0gZf8GS%2FX69Ff%2FC6qxVbf78VXpXuVDx42zk2Gk4nOUwHDaapEA%2B9ZTHKGA%2Fc%2FTIHET0xrj6TPB3gGZ8x21MwmdhrWlBJAKIrEOWwddDMLPIe6qKoUsXh7NVuf7f%2BgzVglR9LE1eUjj0JoL8qSnO7eLJT%2BEqJ7Q9zG3QjqOXVjb%2FRLfiTAUgY7d7Tzwa3I5urBVSiB7NDROiNuGDMMAlOmcEooGpN406RDLSFkFGtATrIy4OWMd44VBzH4Vik%2Bs3wjXeRfEg0eC0lucWVUAem3d9f%2FTndP8ucPnAXciFwPmZcl4CdSe%2BiBv9CXIVMUX5RapsFsCfXrheq%2Bx42m7HRaf5aYaE1mh5He7ZVokhytfu%2BUz0pWBt99drVjfUcDPDoJb%2F1rv2pZzDZix5Q%2Fbv5%2B2tZaTJ109SjwrRLWTWnC1RnL4%2F%2BDoMh%2FnKdLlqi0A41FTx79YXmzABxDtZf7jYzpkmD4wcuxh%2FGq6wef%2B9AjOGnh1ryVqDFQODLqk4eZHwcR5h08%2B2H5lnGTrYEnj8rbtBhy8N6Fas6bUDc9N%2Fcgu92oIzHSzNdia6CGLQZoSl0nHAbGIlQCv%2FM0L5IWzuNlplH59welMzhA1OqieDEYIJAF8ZjW0jrfQ7AzxDwq1RYcAP4Eb6lbKedQPTzcTxxy%2B4H0rqIhLFltWDRVcIAfjROFpIzevR0HinAR2y3un5C3otpqsW6HK0vUR%2FAjOB5cM6pueAQ66m6KT17VpjjxEFdFW1zKpj2FnGcb1xS1WsNP6SqtMVUotB18tVgajDSgYmtSWHF6ls2R7RG%2B6HR95ud%2Bp1G%2FnRTccMIWaibIGOrEBefXwcYE7F%2Bb7nOfuZIfDmXXpORtkCJyvm%2B0aMCBTH2BEINxaHeJ9Cu1gi1lOq7rWRIx%2Fo2er5OHhhetULE2EjPO1DLqYvQOjBziubpqMUxmaZ%2FLQpVnnAqKoIW%2BheL%2FmzCOJQs4Es6JpfNDIfAyrezBcE9XREgTySPArizYBzttPg2jXLLqSz%2B54H9EleGcdDl47E5jJQ2TfBd8cC4w4qbjW3JghsvoAHinwOGVY1KrX&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240513T181405Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFB7WEW4DW%2F20240513%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b2fe39e341a00611770a22edaf792bb09323c6e4e7fb99600e01c3b59261c2d3" alt="" srcset="">
+   <script>
+    const foodData = async()=>{
+        let data = await fetch("https://api.edamam.com/api/recipes/v2?type=public&beta=true&app_id=aa8e5ce5&app_key=%206e624fd45e39a8a07173e81c5fc79440&ingr=10&diet=high-protein&cuisineType=Indian&mealType=Lunch")
+        let jsonData = await data.json()
+        console.log(jsonData)
+    }
+    foodData()
+   </script> 
+</body>
+</html>

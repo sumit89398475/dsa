@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducer Function</title>
+</head>
+<body>
+    <script>
+        const number = [2,3,4,5,6,3,2,4]
+    const arraySum = number.reduce((accumulator, currentValue)=>{
+            accumulator=accumulator+currentValue
+            return accumulator;
+        },2)
+       console.log(arraySum)
+    </script>
+</body>
+</html>

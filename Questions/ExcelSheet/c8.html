@@ -1,0 +1,31 @@
+<!-- Write a JavaScript function to find the length of the longest word in a string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to find the length of the longest word in a
+      string.
+    </title>
+  </head>
+  <body>
+    <script>
+      function longestWorld(str) {
+        let strArray = str.trim().split(/\s+/);
+        var max = strArray[0].length;
+        var place;
+        for (let i = 1; i < strArray.length; i++) {   
+          if (strArray[i].length > max) {
+            max = strArray[i].length;
+            place=i;
+          }
+        }
+        console.log(strArray[place])
+        return max;
+      }
+      console.log(longestWorld(" Bharat mata ki jay ravindra jai Mahismati"));
+    </script>
+  </body>
+</html>

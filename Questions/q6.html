@@ -1,0 +1,49 @@
+<!-- Write a JavaScript function to sort an array of numbers in ascending order. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sort an array of numbers in ascending order</title>
+  </head>
+  <body>
+    <script>
+     
+      function sorting(array){
+        var temp;
+        for(let i=0; i<array.length; i++ ){
+            for(let j=0; j<array.length-1; j++){
+               if(array[i]>array[j+1]){
+              temp = array[j]
+              array[j+1] = temp
+               }
+            }
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+function sortArrayAscending(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap elements
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+// Example usage:
+const numbers = [5, 2, 9, 1, 5, 6];
+const sortedNumbers = sortArrayAscending(numbers);
+console.log(sortedNumbers);  // Output: [1, 2, 5, 5, 6, 9]

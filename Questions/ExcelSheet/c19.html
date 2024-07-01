@@ -1,0 +1,23 @@
+<!-- Write a JavaScript function to get the nth Fibonacci number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write a JavaScript function to get the nth Fibonacci number.</title>
+  </head>
+  <body>
+    <script>
+      function fibonacciSeries(n) {
+        let fibonacciArray = [0, 1];
+        for (let i = 2; i <= n; i++) {
+          fibonacciArray[i] = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+         
+        }
+        return fibonacciArray.slice(0,n+1)
+      }
+      console.log(fibonacciSeries(10))
+    </script>
+  </body>
+</html>

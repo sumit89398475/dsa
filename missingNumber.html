@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Missing Element</title>
+  </head>
+  <body>
+    <script>
+      let numArray = [1, 2, 3, 5, 7, 8, 9, 12];
+      
+
+      function missingNumber() {
+        let missingArray = [];
+        for (let i = 0; i < numArray.length-1; i++) {
+          for(let j=0; j<numArray[i+1];j++){
+            missingArray.push(j)
+          }
+          }
+        }
+        console.log(missingArray);
+      
+
+      missingNumber(numArray);
+    </script>
+  </body>
+</html>

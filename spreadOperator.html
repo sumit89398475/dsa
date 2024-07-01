@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Concatination of Array
+
+      let array1 = [2, 4, 6, 7, 9];
+      let array2 = [3, 4, 6, 8];
+
+      let resut = [...array1, ...array2];
+      console.log(resut);
+
+      // Overriding properties
+
+      let object1 = { name: "Sumit", age: 25 };
+       let object2 = {Location: "Machawa Gopalganj Bihar", country:"India"}
+
+    let resultDemo = {...object1, ...object2, country:"Bharat"}
+
+    console.log(resultDemo)
+
+    </script>
+  </body>
+</html>

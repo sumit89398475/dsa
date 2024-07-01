@@ -1,0 +1,32 @@
+<!-- Write a JavaScript function to debounce another function. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write a JavaScript function to debounce another function</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Search Here" onkeyup="handleSearchSuggestion()"/>
+    <script>
+        let counter = 0;
+        function getData(){
+            console.log("data is fetching", counter++)
+        }
+            let timer;
+        function debounce(func,delay){
+            return function(){
+                let arg = arguments;
+                let context = this;
+                clearTimeout(timer)
+             timer= setTimeout(()=>{
+                func.apply(context, arg)
+                },delay)
+            }
+        }
+
+        const handleSearchSuggestion = debounce(getData,300)
+
+    </script>
+  </body>
+</html>

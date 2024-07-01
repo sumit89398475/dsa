@@ -1,0 +1,25 @@
+<!-- Write a JavaScript function to merge two sorted arrays into one sorted array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to merge two sorted arrays into one sorted
+      array.
+    </title>
+  </head>
+  <body>
+    <script>
+    function mergeArray(array1, array2) {
+    // Sort and merge arrays
+    let resultArray = array1.sort((a, b) => a - b).concat(array2.sort((a, b) => a - b));
+    console.log(resultArray);
+}
+
+mergeArray([2, 3, 1, 2], [6, 3, 4, 7, 9]);
+
+    </script>
+  </body>
+</html>

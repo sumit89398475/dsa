@@ -1,0 +1,31 @@
+<!-- Write a JavaScript function to find the maximum and minimum numbers in an array. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function maxMin(array) {
+        let max = array[0];
+        let min = array[0];
+        for (let i = 0; i < array.length; i++) {
+            if(array[i]>max){
+                max=array[i]
+            }
+            if(array[i]<min){
+                min =array[i]
+            }
+        }
+        console.log(max)
+        console.log(min)
+      }
+
+      maxMin([2,3,5,1,6])
+
+    </script>
+  </body>
+</html>
