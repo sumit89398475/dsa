@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>// Write a JavaScript function to find the longest common prefix among an array of strings.</title>
+</head>
+<body>
+    <script>
+        
+function longPref(array){
+   if(array.length===0) return
+   let prefix = array[0];
+   for(let i=1; i<array.length; i++){
+       while(array[i].indexOf(prefix)!==0){
+        prefix=    prefix.slice(0,-1)
+       }
+       if(prefix=="") return
+   }
+   return prefix
+}
+
+const result = longPref(["banana", "band", "bandwidth"])
+console.log(result)
+    </script>
+</body>
+</html>
