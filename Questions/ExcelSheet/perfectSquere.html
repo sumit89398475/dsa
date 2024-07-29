@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfectSquare</title>
+</head>
+<body>
+    <script>
+        function perfectSquare(num){
+                if(num<=0) return false
+            for(let i=0; i*i<=num; i++){
+                if(i*i === num){
+                    console.log("This number is perfect Number")
+                    return true
+                }
+                return false
+            }
+            
+        }
+        const result = perfectSquare(76);
+        console.log(result)
+    </script>
+</body>
+</html>
